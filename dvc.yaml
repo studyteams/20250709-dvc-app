@@ -1,0 +1,22 @@
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - src/train.py
+    - data/raw_data.csv
+    - params.yaml
+    outs:
+    - model/ridge_model.pkl
+    - model/lasso_model.pkl
+    - model/linear_model.pkl
+    - model/scaler.pkl
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - src/evaluate.py
+    - model/ridge_model.pkl
+    - model/lasso_model.pkl
+    - model/linear_model.pkl
+    - model/scaler.pkl
+    - data/raw_data.csv
+    - params.yaml

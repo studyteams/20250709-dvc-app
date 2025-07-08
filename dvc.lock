@@ -1,0 +1,37 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/raw_data.csv
+      hash: md5
+      md5: aa9f89859efcecca525f09b35cff4081
+      size: 3700
+    - path: params.yaml
+      hash: md5
+      md5: d4673567e8db8bd09b7c7dfc8d80f6f4
+      size: 20
+    - path: src/train.py
+      hash: md5
+      md5: 8a2ded2ba79ad2f0d9a62f45384106b3
+      size: 1254
+    outs:
+    - path: model/linear_regression_model.pkl
+      hash: md5
+      md5: 24750241f984a96cadda407a83571a5a
+      size: 817
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: data/raw_data.csv
+      hash: md5
+      md5: aa9f89859efcecca525f09b35cff4081
+      size: 3700
+    - path: model/linear_regression_model.pkl
+      hash: md5
+      md5: 24750241f984a96cadda407a83571a5a
+      size: 817
+    - path: src/evaluate.py
+      hash: md5
+      md5: bbb54796ae02e53e8749d53904e04760
+      size: 1012

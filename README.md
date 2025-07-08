@@ -2,6 +2,9 @@
 
 이 프로젝트는 **DVC (Data Version Control)**를 사용한 머신러닝 워크플로우의 실습을 위한 예제입니다. DVC의 핵심 기능들을 체험하고 학습할 수 있도록 설계되었습니다.
 
+![CleanShot 2025-07-09 at 00 11 24](https://github.com/user-attachments/assets/db3b3138-49c0-4187-a598-2a433b4e28a0)
+
+
 ## 🎯 프로젝트 목표
 
 - **DVC의 핵심 개념 이해**: 데이터 버전 관리, 파이프라인 관리, 실험 추적
